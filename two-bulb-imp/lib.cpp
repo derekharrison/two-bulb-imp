@@ -2,7 +2,7 @@
 //  lib.cpp
 //  two-bulb-imp
 //
-//  Created by Derek Harrison on 14/03/2022.
+//  Created by dwh on 14/03/2022.
 //
 
 #include <stdio.h>
@@ -498,6 +498,13 @@ void compute_bulb_compositions(e_params_t e_params,
     
     // Organize data
     c_data_t comp_data;
+    comp_data.ng = ng;
+    comp_data.p_params = p_params;
+    comp_data.e_params = e_params;
+    comp_data.t_params = t_params;
+    comp_data.bulb_data = bulb_data;
+    comp_data.bulb_data_old = bulb_data;
+    comp_data.bulb_data_inter = bulb_data;
     
     // Allocate data for tube composition
     comp_data.tube_fracs = new node_t[ng];
@@ -523,15 +530,6 @@ void compute_bulb_compositions(e_params_t e_params,
     
     double t = t_params.to;
     double dt = (t_params.tf - t_params.to) / t_params.nt;
-    
-    // Organize data continued
-    comp_data.ng = ng;
-    comp_data.p_params = p_params;
-    comp_data.e_params = e_params;
-    comp_data.t_params = t_params;
-    comp_data.bulb_data = bulb_data;
-    comp_data.bulb_data_old = bulb_data;
-    comp_data.bulb_data_inter = bulb_data;
     
     // Compute composition
     while(t < t_params.tf) {

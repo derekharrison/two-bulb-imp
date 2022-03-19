@@ -2,7 +2,7 @@
 //  main.cpp
 //  two-bulb-imp
 //
-//  Created by mndx on 12/03/2022.
+//  Created by dwh on 12/03/2022.
 //  Three-component two-bulb diffusion
 //  using implicit time discretization
 //
