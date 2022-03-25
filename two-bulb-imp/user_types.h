@@ -46,12 +46,15 @@ typedef struct experiment_params {
 
 typedef struct computation_data {
     int ng;
+
     p_params_t p_params;
     e_params_t e_params;
     t_params_t t_params;
+
     b_data_t bulb_data_inter;
     b_data_t bulb_data_old;
     b_data_t bulb_data;
+
     node_t * tube_fracs;
     node_t * tube_fracs_old;
     node_t * tube_fracs_inter;
