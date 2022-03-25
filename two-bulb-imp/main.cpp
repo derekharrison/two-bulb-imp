@@ -38,13 +38,13 @@ int main(int argc, const char * argv[]) {
     
     // Total concentration
     p_params_t p_params;
-    p_params.ct = 1.0; // Total concentration (mol/m3)
+    p_params.ct = 1.0; // Total concentration (mol / m3)
     
     // Time parameters
     t_params_t t_params;
     t_params.to = 0.0; // Initial time (h)
     t_params.tf = 20.0; // Final time (h)
-    t_params.nt = 20; // Number of time steps.
+    t_params.nt = 5; // Number of time steps.
     t_params.dt = (double) (t_params.tf - t_params.to) / t_params.nt; // Time sampling
     
     // Diffusivities
