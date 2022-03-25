@@ -12,14 +12,6 @@
 #include "lib.hpp"
 #include "user_types.h"
 
-typedef std::vector<std::vector<double>> mat_d_t;
-typedef std::vector<double> vec_d_t;
-
-mat_d_t anb_coeff1;
-vec_d_t ap_coeff1;
-mat_d_t anb_coeff2;
-vec_d_t ap_coeff2;
-
 double a1(p_params_t & p_params, double x2) {
     double v1 = 1.0 / p_params.D13;
     double v2 = 1.0 / p_params.D12;
@@ -113,15 +105,6 @@ void bulb1_c1(c_data_t & comp_data) {
     
     double x1_b1 = -2 * beta1_loc * x11 * A / dz - 2 * beta2_loc * (x21 - x2) * A / dz + old_term1;
     x1_b1 = x1_b1 / ap1;
-    
-    // Store coefficients for analysis
-    vec_d_t vec_anb;
-    vec_anb.push_back(-2 * beta1_loc * 1.0 * A / dz);
-    vec_anb.push_back(2 * beta2_loc * 1.0 * A / dz);
-    vec_anb.push_back(2 * beta2_loc * 1.0 * A / dz);
-
-    ap_coeff1.push_back(ap1);
-    anb_coeff1.push_back(vec_anb);
 
     comp_data.bulb_data.mol_fracs_bulb1.x1 = x1_b1;
 }
@@ -152,15 +135,6 @@ void bulb1_c2(c_data_t & comp_data) {
 
     double x2_b1 = -2 * alpha1_loc / dz * (x11 - x1) * A  - 2 * alpha2_loc * x21 * A / dz + old_term2;
     x2_b1 = x2_b1 / ap2;
-    
-    // Store coefficients for analysis
-    vec_d_t vec_anb;
-    vec_anb.push_back(-2 * alpha1_loc / dz * 1.0 * A);
-    vec_anb.push_back(-2 * alpha1_loc / dz * 1.0 * A);
-    vec_anb.push_back(2 * alpha2_loc * 1.0 * A / dz);
-
-    ap_coeff2.push_back(ap2);
-    anb_coeff2.push_back(vec_anb);
 
     comp_data.bulb_data.mol_fracs_bulb1.x2 = x2_b1;
     comp_data.bulb_data.mol_fracs_bulb1.x3 = 1.0 - bulb_data.mol_fracs_bulb1.x1 - x2_b1;
@@ -192,15 +166,6 @@ void bulb2_c1(c_data_t & comp_data) {
     
     double x1_b2 = -2 * beta1_loc * x1n * A / dz + 2 * beta2_loc * (x2 - x2n) * A / dz + old_term1;
     x1_b2 = x1_b2 / ap1;
-    
-    // Store coefficients for analysis
-    vec_d_t vec_anb;
-    vec_anb.push_back(-2 * beta1_loc * 1.0 * A / dz);
-    vec_anb.push_back(-2 * beta2_loc * 1.0 * A / dz);
-    vec_anb.push_back(-2 * beta2_loc * 1.0 * A / dz);
-
-    ap_coeff1.push_back(ap1);
-    anb_coeff1.push_back(vec_anb);
 
     comp_data.bulb_data.mol_fracs_bulb2.x1 = x1_b2;
 }
@@ -231,15 +196,6 @@ void bulb2_c2(c_data_t & comp_data) {
 
     double x2_b2 = 2 * alpha1_loc / dz * (x1 - x1n) * A  - 2 * alpha2_loc * x2n * A / dz + old_term2;
     x2_b2 = x2_b2 / ap2;
-    
-    // Store coefficients for analysis
-    vec_d_t vec_anb;
-    vec_anb.push_back(2 * alpha1_loc / dz * 1.0 * A);
-    vec_anb.push_back(2 * alpha1_loc / dz * 1.0 * A);
-    vec_anb.push_back(2 * alpha2_loc * 1.0 * A / dz);
-
-    ap_coeff2.push_back(ap2);
-    anb_coeff2.push_back(vec_anb);
 
     comp_data.bulb_data.mol_fracs_bulb2.x2 = x2_b2;
     comp_data.bulb_data.mol_fracs_bulb2.x3 = 1.0 - bulb_data.mol_fracs_bulb2.x1 - x2_b2;
