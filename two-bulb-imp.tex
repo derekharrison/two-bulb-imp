@@ -51,6 +51,7 @@ Diffusion occurs at constant pressure. To preserve the total concentration the f
 \end{equation}
 \paragraph*{Method}
 To compute the composition of the system the model equations (\ref{eqn:eqn_2}) - (\ref{eqn:eqn_5}) are solved using the finite volume method. Time discretization is fully implicit, achieved by eliminating the flux-components from the model equations. Central differencing is used for the diffusion terms.
+
 The mole fractions of $H_2$, $N_2$ and $CO_2$ in the first compartment are initially 0.0, 0.501 and 0.499, respectively. In the second compartment the mole fractions of $H_2$, $N_2$ and $CO_2$ are initially 0.501, 0.499 and 0.0, respectively. The diffusivities are $D_{12} = 8.33e-5$  $(m^2/s)$, $D_{13} = 6.8e-5$ $(m^2/s)$ and $D_{23} = 1.68e-5$ $(m^2/s)$. The volumes of the compartments are $5e-4$ $(m^3)$ and the tube connecting the compartments has a length of $1e-2$ $(m)$ and a diameter of $2e-3$ $(m)$. 
 
 \paragraph*{Results} 
@@ -63,7 +64,7 @@ The results of solving the model equations are shown in figure \ref{fig:fig_1}. 
 \end{figure}
 
 \paragraph*{Discussion}
-The results obtained in this work based on implicit time discretization is compared with an approach based on explicit time discretization. Explicit time discretization was only stable for small timesteps, whereas the implicitly discretized approach was stable. Analysis of the coefficients of the linear system obtained from discretization of the model equations shows that the coefficients satisfy the Scarborough criterion, and so the matrix associated with the linear system is diagonally dominant.
+The results obtained in this work based on implicit time discretization is compared with an approach based on explicit time discretization. Explicit time discretization was only stable for small timesteps, whereas the implicitly discretized approach was stable even for large timesteps. Analysis of the coefficients of the linear system obtained from discretization of the model equations shows that the coefficients satisfy the Scarborough criterion, and so the matrix associated with the linear system is diagonally dominant.
 
 \paragraph*{Conclusion}
 The Maxwell-Stefan equations were solved using the finite volume method. Results obtained numerically were shown to agree well with experimental observations, thereby validating the model. Regarding the discretization strategy, it was shown that implicit time discretization leads to more stable solutions compared with explicit schemes. 
