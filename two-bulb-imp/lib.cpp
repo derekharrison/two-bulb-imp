@@ -473,14 +473,14 @@ void compute_bulb_compositions(e_params_t e_params,
         comp_data.tube_fracs_old[node].x3 = 1.0 / 3;
     }
     
-    // Perform iterations
+    // Compute composition
     int max_out_it = MAX_OUT;
     int max_in_it = MAX_IN;
     
     double t = t_params.to;
     double dt = (t_params.tf - t_params.to) / t_params.nt;
     
-    // Compute composition
+    // Loop to time t = tf
     while(t < t_params.tf) {
         
         // Update bulb composition of previous time step
