@@ -66,7 +66,7 @@ The results of solving the model equations are shown in figure \ref{fig:fig_1}. 
 \end{figure}
 
 \paragraph*{Discussion}
-Explicit time discretization was only stable for small timesteps, whereas the implicitly discretized approach was stable even for large timesteps. Analysis of the coefficients of the linear systems obtained from implicit discretization of the model equations showed the coefficients satisfy the Scarborough criterion, and so the matrices associated with the linear systems are diagonally dominant.
+Explicit time discretization was only stable when small timesteps were used, whereas the implicitly discretized approach was stable even when large timesteps were used. Analysis of the coefficients of the linear systems obtained from implicit discretization of the model equations showed the coefficients satisfy the Scarborough criterion, and so the matrices associated with the linear systems are diagonally dominant.
 
 \paragraph*{Conclusion}
 The Maxwell-Stefan equations were solved using the finite volume method. Results obtained numerically were found to agree well with experimental observations, thereby validating the model. Regarding the discretization strategy, it was found that implicit time discretization is significantly more stable than an explicit scheme. 
