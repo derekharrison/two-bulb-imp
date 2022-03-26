@@ -29,7 +29,7 @@ The Maxwell-Stefan equations for multi-component diffusion are solved using the 
 ]
 
 \paragraph*{Twin-bulb model}
-The twin-bulb experiment [\ref{eqn:my_ref_2}] consists of two small compartments, connected by a tube through which the components can diffuse. The compartments are filled with $H_2$, $N_2$ and $CO_2$. Diffusion through the tube can be modeled using the Maxwell-Stefan equations [\ref{eqn:my_ref_1}]:
+The twin-bulb experiment [\ref{eqn:my_ref_2}] consists of two small compartments (bulbs) connected by a tube through which the components can diffuse. The compartments are filled with $H_2$, $N_2$ and $CO_2$. Diffusion through the tube can be modeled using the Maxwell-Stefan equations [\ref{eqn:my_ref_1}]:
 \begin{equation}
 \label{eqn:eqn_2}
 -\left( \frac{\partial \ln{\gamma_i}}{\partial \ln{x_i}} + 1 \right) \nabla x_i = \sum_{j \neq i} \frac{x_j \textbf{J}_i - x_i \textbf{J}_j}{c_t D_{ij}}
@@ -50,7 +50,7 @@ Diffusion occurs at constant pressure. To preserve the total concentration the f
 \sum_{i} \textbf{J}_i = 0
 \end{equation}
 \paragraph*{Method}
-To compute the composition of the system the model equations (\ref{eqn:eqn_2}) - (\ref{eqn:eqn_5}) are solved using the finite volume method. Time discretization is fully implicit, achieved by eliminating the flux-components from the model equations. Central differencing is used for the diffusion terms.
+To compute the composition in the bulbs the model equations (\ref{eqn:eqn_2}) - (\ref{eqn:eqn_5}) are solved using the finite volume method. Time discretization is fully implicit, achieved by eliminating the flux-components from the model equations. Central differencing is used for the diffusion terms.
 
 An explicit method is also explored as a reference to obtain a measure of the stability of the implicit approach.
 
