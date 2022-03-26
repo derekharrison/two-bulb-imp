@@ -86,7 +86,6 @@ void bulb1_c1(c_data_t & comp_data) {
     double dz = comp_data.e_params.dz;
     double dt = comp_data.t_params.dt;
     
-    // Bulb 1, component 1
     double x1 = comp_data.bulb_data.mol_fracs_bulb1.x1;
     double x2 = comp_data.bulb_data.mol_fracs_bulb1.x2;
 
@@ -114,7 +113,6 @@ void bulb1_c2(c_data_t & comp_data) {
     double dz = comp_data.e_params.dz;
     double dt = comp_data.t_params.dt;
     
-    // Bulb 1, component 2
     double x1 = comp_data.bulb_data.mol_fracs_bulb1.x1;
     double x2 = comp_data.bulb_data.mol_fracs_bulb1.x2;
 
@@ -260,7 +258,6 @@ void mid_nodes1(c_data_t & comp_data) {
     double dz = comp_data.e_params.dz;
     double dt = comp_data.t_params.dt;
     
-    // Tube mid nodes, component 1
     for(int node = 1; node < ng - 1; ++node) {
         double x1w = 0.5 * (comp_data.tube_fracs_inter[node - 1].x1 + comp_data.tube_fracs_inter[node].x1);
         double x2w = 0.5 * (comp_data.tube_fracs_inter[node - 1].x2 + comp_data.tube_fracs_inter[node].x2);
