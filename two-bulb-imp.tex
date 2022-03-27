@@ -53,12 +53,12 @@ Diffusion occurs at constant pressure. To preserve the total concentration the f
 \paragraph*{Method}
 To compute the composition in the bulbs the model equations (\ref{eqn:eqn_3}) - (\ref{eqn:eqn_5}) are solved using the finite volume method. Time discretization is fully implicit, achieved by eliminating the flux-components from the model equations. Central differencing is used for the diffusion terms.
 
-An explicit method is also explored as a reference to obtain a measure for the stability of the implicit approach.
+An explicit time discretization scheme is used as a reference to validate and obtain a measure for the stability of the implicit approach.
 
 The mole fractions of $H_2$, $N_2$ and $CO_2$ in the first compartment are initially 0.0, 0.501 and 0.499, respectively. In the second compartment the mole fractions of $H_2$, $N_2$ and $CO_2$ are initially 0.501, 0.499 and 0.0, respectively. The diffusivities are $D_{12} = 8.33e-5$  $(m^2/s)$, $D_{13} = 6.8e-5$ $(m^2/s)$ and $D_{23} = 1.68e-5$ $(m^2/s)$. The volumes of the compartments are $5e-4$ $(m^3)$ and the tube connecting the compartments has a length of $1e-2$ $(m)$ and a diameter of $2e-3$ $(m)$. 
 
 \paragraph*{Results} 
-The results obtained from solving the model equations are shown in figure \ref{fig:fig_1}. The results practically coincide with results obtained from the explicit method explored in this work (results are not shown) and agree well with experimental observations [\ref{eqn:my_ref_3}].
+The results obtained from solving the model equations are shown in figure \ref{fig:fig_1}. The results practically coincide with results obtained from the explicit method (results are not shown) and agree well with experimental observations [\ref{eqn:my_ref_3}].
 
 \begin{figure}
 \includegraphics[width=\linewidth]{graph_of_results.png}
