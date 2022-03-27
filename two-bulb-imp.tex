@@ -8,6 +8,7 @@
 \newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
 \usepackage{siunitx} % Required for alignment
+\usepackage{titlesec}
 
 \sisetup{
   round-mode          = places, % Rounds numbers
@@ -145,7 +146,7 @@ With $\beta_1$, $\beta_2$, $\alpha_1$ and $\alpha_2$ given by:
 \alpha_2 = \frac{a_1 c_t}{a_2 b_1 - a_1 b_2}
 \end{equation}
 
-\section*{Nomenclature}
+\subsubsection*{Nomenclature}
 \begin{table}[H]
     \begin{tabular}{c l}  
       $a_i$ & Proportionality factor ($ m^{-2} \cdot s $) \\     
@@ -160,7 +161,7 @@ With $\beta_1$, $\beta_2$, $\alpha_1$ and $\alpha_2$ given by:
       $z$ & Axial coordinate ($m$) \\
     \end{tabular}
 \end{table}
-\subsection*{Greek}
+\subsubsection*{Greek}
 \begin{table}[H]
     \begin{tabular}{c l} 
       $\alpha_i$ & Proportionality factor ($mol \cdot m^{-1} \cdot s^{-1}$) \\
@@ -168,7 +169,7 @@ With $\beta_1$, $\beta_2$, $\alpha_1$ and $\alpha_2$ given by:
       $\gamma_i$ & Activity coefficient (-) \\
     \end{tabular}
 \end{table}
-\subsection*{Subscripts}
+\subsubsection*{Subscripts}
 \begin{table}[H]
     \begin{tabular}{c l} 
       $i$ & Component index (-)\\
@@ -177,7 +178,10 @@ With $\beta_1$, $\beta_2$, $\alpha_1$ and $\alpha_2$ given by:
     \end{tabular}
 \end{table}
 
-\begin{thebibliography}{5}
+%\titleformat*{\section}{\normalfont}
+\subsubsection*{References}
+\renewcommand{\refname}{}
+\begin{thebibliography}{2}
 \bibitem{Duncan}
 \label{eqn:my_ref_2}
 Duncan, J.B., Toor, H.L. \textit{AIChE J.}, 1962, \textbf{8}, 38–41.
