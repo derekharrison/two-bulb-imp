@@ -24,7 +24,7 @@
 \maketitle
 \begin{abstract}
 \noindent
-The Maxwell-Stefan equations for multi-component diffusion are solved using the finite volume method. Time discretization is fully implicit. To validate the solution the Maxwell-Stefan equations are used to model the three-component twin-bulb experiment and the results are compared with other numerical methods as well as experimental observations.
+The Maxwell-Stefan equations for multi-component diffusion are solved using the finite volume method. Time discretization is fully implicit. To validate the solution the Maxwell-Stefan equations are used to model the three-component twin-bulb experiment and the results are compared with results obtained from other numerical methods as well as experimental observations.
 \end{abstract}
 \end{@twocolumnfalse}
 ]
@@ -58,7 +58,7 @@ An explicit method is also explored as a reference to obtain a measure for the s
 The mole fractions of $H_2$, $N_2$ and $CO_2$ in the first compartment are initially 0.0, 0.501 and 0.499, respectively. In the second compartment the mole fractions of $H_2$, $N_2$ and $CO_2$ are initially 0.501, 0.499 and 0.0, respectively. The diffusivities are $D_{12} = 8.33e-5$  $(m^2/s)$, $D_{13} = 6.8e-5$ $(m^2/s)$ and $D_{23} = 1.68e-5$ $(m^2/s)$. The volumes of the compartments are $5e-4$ $(m^3)$ and the tube connecting the compartments has a length of $1e-2$ $(m)$ and a diameter of $2e-3$ $(m)$. 
 
 \paragraph*{Results} 
-The results obtained from solving the model equations are shown in figure \ref{fig:fig_1}. The results agree well with numerical and experimental results presented in [\ref{eqn:my_ref_3}].
+The results obtained from solving the model equations are shown in figure \ref{fig:fig_1}. The results practically coincide with results obtained from the explicit method explored in this work (results are not shown) and agree well with experimental observations [\ref{eqn:my_ref_3}].
 
 \begin{figure}
 \includegraphics[width=\linewidth]{graph_of_results.png}
@@ -70,7 +70,7 @@ The results obtained from solving the model equations are shown in figure \ref{f
 Explicit time discretization was only stable when small timesteps were used, whereas implicit discretization was stable even when large timesteps were used. Analysis of the coefficients of the linear systems obtained from implicit discretization of the model equations showed the coefficients satisfy the Scarborough criterion, and so the matrices associated with the linear systems are diagonally dominant.
 
 \paragraph*{Conclusion}
-The Maxwell-Stefan equations were solved using the finite volume method and the results were found to agree well with other numerical methods and experimental observations, thereby validating the solution. Regarding the discretization strategy, it was found that implicit time discretization is significantly more stable than an explicit scheme. 
+The Maxwell-Stefan equations were solved using the finite volume method and the results were found to nearly coincide with those of the explicit method and agree well with experimental observations, thereby validating the solution. Regarding the discretization strategy, it was found that implicit time discretization is significantly more stable than an explicit scheme. 
 
 \paragraph*{Appendix}
 Here the one-dimensional case of the Maxwell-Stefan equations is elaborated on. The one-dimensional case of (\ref{eqn:eqn_3}) for component $1$ is:
