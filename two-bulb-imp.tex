@@ -58,7 +58,7 @@ An explicit time discretization scheme is used as a reference to validate and ob
 The mole fractions of $H_2$, $N_2$ and $CO_2$ in the first compartment are initially 0.0, 0.501 and 0.499, respectively. In the second compartment the mole fractions of $H_2$, $N_2$ and $CO_2$ are initially 0.501, 0.499 and 0.0, respectively. The diffusivities are $D_{12} = 8.33e-5$  $(m^2/s)$, $D_{13} = 6.8e-5$ $(m^2/s)$ and $D_{23} = 1.68e-5$ $(m^2/s)$. The volumes of the compartments are $5e-4$ $(m^3)$ and the tube connecting the compartments has a length of $1e-2$ $(m)$ and a diameter of $2e-3$ $(m)$. 
 
 \paragraph*{Results} 
-The results obtained from solving the model equations are shown in figure \ref{fig:fig_1}. The results practically coincide with results obtained from the explicit method (results are not shown) and agree well with experimental observations [\ref{eqn:my_ref_3}].
+The results obtained from solving the model equations are shown in figure \ref{fig:fig_1}. The results were in excellent agreement with the results obtained from the explicit method (results are not shown) and agreed well with experimental observations [\ref{eqn:my_ref_3}].
 
 \begin{figure}
 \includegraphics[width=\linewidth]{graph_of_results.png}
@@ -70,7 +70,7 @@ The results obtained from solving the model equations are shown in figure \ref{f
 Explicit time discretization was only stable when small timesteps were used, whereas implicit discretization was stable even when large timesteps were used. Analysis of the coefficients of the linear systems obtained from implicit discretization of the model equations showed the coefficients satisfy the Scarborough criterion, and so the matrices associated with the linear systems are diagonally dominant.
 
 \paragraph*{Conclusion}
-The Maxwell-Stefan equations were solved using the finite volume method and the results were found to nearly coincide with those of the explicit method and agree well with experimental observations, thereby validating the solution. Regarding the discretization strategy, it was found that implicit time discretization is significantly more stable than explicit discretization. 
+The Maxwell-Stefan equations were solved using the finite volume method and the results were found to coincide with those of the explicit method and agree well with experimental observations, thereby validating the solution. Regarding the discretization strategy, it was found that implicit time discretization is significantly more stable than explicit discretization. 
 
 \paragraph*{Appendix}
 Here the one-dimensional case of the Maxwell-Stefan equations is elaborated on. The one-dimensional case of (\ref{eqn:eqn_3}) for component $1$ is:
