@@ -233,7 +233,7 @@ void tube0_c2(c_data_t & comp_data) {
     
     double x1E = comp_data.tube_fracs[1].x1;
     double x2E = comp_data.tube_fracs[1].x2;
-    double x1P = comp_data.tube_fracs_inter[0].x1;
+    double x1P = comp_data.tube_fracs[0].x1;
     
     double alpha1w = alpha1(comp_data.p_params, x1w, x2w);
     double alpha2w = alpha2(comp_data.p_params, x1w, x2w);
