@@ -24,7 +24,7 @@
 \maketitle
 \begin{abstract}
 \noindent
-The Maxwell-Stefan equations for multi-component diffusion are solved using the finite volume method. Time discretization is fully implicit. To validate the solution the Maxwell-Stefan equations are used to model the three-component twin-bulb experiment and the results are compared with results obtained from an explicit numerical scheme as well as experimental observations.
+The Maxwell-Stefan equations for multi-component diffusion are solved using the finite volume method. Time discretization is fully implicit. To validate the method the Maxwell-Stefan equations are used to model the three-component twin-bulb experiment and the results are compared with results obtained from an explicit numerical scheme as well as experimental observations.
 \end{abstract}
 \end{@twocolumnfalse}
 ]
@@ -67,10 +67,10 @@ The results obtained from solving the model equations are shown in figure \ref{f
 \end{figure}
 
 \paragraph*{Discussion}
-Explicit time discretization was only stable when small timesteps were used, whereas implicit discretization was stable even when large timesteps were used. Analysis of the coefficients of the linear systems obtained from implicit discretization of the model equations showed the coefficients satisfy the Scarborough criterion and have the same sign. Therefore, the coefficients meet the requirements for convergence and boundedness. 
+Explicit time discretization was only stable when small timesteps were used, whereas implicit discretization was stable even when large timesteps were used. Analysis of the coefficients of the linear systems obtained from implicit discretization of the model equations showed the coefficients satisfy the Scarborough criterion and have the same sign. Therefore, the coefficients meet the requirements for convergence and boundedness. The implicit scheme also had the lowest running time, suggesting that the efficiency gained by using the implicit scheme weighs more heavily than the cost of solving a linear system at each timestep.
 
 \paragraph*{Conclusion}
-The Maxwell-Stefan equations were solved using the finite volume method and the results were found to coincide with those of the explicit method and agree well with experimental observations, thereby validating the solution. Regarding the discretization strategy, it was found that implicit time discretization is significantly more stable than explicit discretization. 
+The Maxwell-Stefan equations were solved using the finite volume method and the results were found to coincide with those of the explicit method and agree well with experimental observations, thereby validating the method. Regarding the discretization strategy, it was found that implicit time discretization is significantly more stable than explicit discretization and led to lower running times. 
 
 \paragraph*{Appendix}
 Here the one-dimensional case of the Maxwell-Stefan equations modeling the three-component twin-bulb experiment is elaborated on. The one-dimensional case of (\ref{eqn:eqn_3}) for component $1$ is:
