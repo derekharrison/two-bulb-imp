@@ -1,4 +1,4 @@
-\documentclass[twocolumn]{article}
+\documentclass[11]{Report}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -18,18 +18,13 @@
 \begin{document}
 \author{Derek W. Harrison}
 \title{Application of the Finite Volume Method to the Maxwell-Stefan model for diffusion}
-
-\twocolumn[
-\begin{@twocolumnfalse}
 \maketitle
-\begin{abstract}
-\noindent
-The Maxwell-Stefan equations for multi-component diffusion are solved using the finite volume method. Time discretization is fully implicit. To validate the method the Maxwell-Stefan equations are used to model the three-component twin-bulb experiment and the results are compared with results obtained from an explicit numerical scheme as well as experimental observations.
-\end{abstract}
-\end{@twocolumnfalse}
-]
 
-\paragraph*{Twin-bulb model}
+
+\section*{Introduction}
+The Maxwell-Stefan equations for multi-component diffusion are solved using the finite volume method. Time discretization is fully implicit. To validate the method the Maxwell-Stefan equations are used to model the three-component twin-bulb experiment and the results are compared with results obtained from an explicit numerical scheme as well as experimental observations.
+
+\section*{Twin-bulb model}
 The twin-bulb experiment [\ref{eqn:my_ref_2}] consists of two small compartments (bulbs) connected by a tube through which the components can diffuse. The compartments are filled with $H_2$, $N_2$ and $CO_2$. Diffusion through the tube can be modeled using the Maxwell-Stefan equations [\ref{eqn:my_ref_1}]:
 \begin{equation}
 \label{eqn:eqn_2}
@@ -50,14 +45,14 @@ Diffusion occurs at constant pressure. To preserve the total concentration the f
 \label{eqn:eqn_5}
 \sum_{i} \textbf{J}_i = 0
 \end{equation}
-\paragraph*{Method}
+\section*{Method}
 To compute the composition in the bulbs the model equations (\ref{eqn:eqn_3}) - (\ref{eqn:eqn_5}) are solved using the finite volume method. Time discretization is fully implicit, achieved by eliminating the flux-components from the model equations. Central differencing is used for the diffusion terms.
 
 An explicit time discretization scheme is used as a reference to validate and obtain a measure for the stability of the implicit approach.
 
 The mole fractions of $H_2$, $N_2$ and $CO_2$ in the first compartment (bulb $1$) are initially 0.501, 0.499 and 0.0, respectively. In the second compartment (bulb $2$) the mole fractions of $H_2$, $N_2$ and $CO_2$ are initially 0.0, 0.501 and 0.499, respectively. The diffusivities are $D_{12} = 8.33e-5$  $(m^2/s)$, $D_{13} = 6.8e-5$ $(m^2/s)$ and $D_{23} = 1.68e-5$ $(m^2/s)$. The volumes of the compartments are $5e-4$ $(m^3)$ and the tube connecting the compartments has a length of $1e-2$ $(m)$ and a diameter of $2e-3$ $(m)$. 
 
-\paragraph*{Results} 
+\section*{Results} 
 The results obtained from solving the model equations are shown in figure \ref{fig:fig_1}. The results are in excellent agreement with the results obtained from the explicit method (results are not shown) and agree well with experimental observations [\ref{eqn:my_ref_3}].
 
 \begin{figure}
@@ -66,13 +61,13 @@ The results obtained from solving the model equations are shown in figure \ref{f
 \label{fig:fig_1}
 \end{figure}
 
-\paragraph*{Discussion}
+\section*{Discussion}
 Explicit time discretization was only stable when small timesteps were used, whereas implicit discretization was stable even when large timesteps were used. Analysis of the coefficients of the linear systems obtained from implicit discretization of the model equations showed the coefficients satisfy the Scarborough criterion and have the same sign. Therefore, the coefficients meet the requirements for convergence and boundedness. The implicit scheme also had the lowest running time, suggesting that the efficiency gained by using the implicit scheme weighs more heavily than the cost of solving a linear system at each timestep.
 
-\paragraph*{Conclusion}
+\section*{Conclusion}
 The Maxwell-Stefan equations were solved using the finite volume method and the results were found to coincide with those of the explicit method and agree well with experimental observations, thereby validating the method. Regarding the discretization strategy, it was found that implicit time discretization is significantly more stable than explicit discretization and led to lower running times. 
 
-\paragraph*{Appendix}
+\section*{Appendix}
 Here the one-dimensional case of the Maxwell-Stefan equations modeling the three-component twin-bulb experiment is elaborated on. The one-dimensional case of (\ref{eqn:eqn_3}) for component $1$ is:
 \begin{equation}
 \label{eqn:eqn_6}
@@ -180,15 +175,14 @@ Equations (\ref{eqn:eqn_8}), (\ref{eqn:eqn_9}), (\ref{eqn:eqn_16}) and (\ref{eqn
 \end{table}
 
 %\titleformat*{\section}{\normalfont}
-\subsubsection*{References}
-\renewcommand{\refname}{}
-\begin{thebibliography}{2}
+\renewcommand{\bibname}{References}
+\begin{thebibliography}{5}
 \bibitem{Duncan}
 \label{eqn:my_ref_2}
 Duncan, J.B., Toor, H.L. \textit{AIChE J.}, 1962, \textbf{8}, 38–41.
 \bibitem{Taylor} 
 \label{eqn:my_ref_1}
-Taylor, R., Krishna, R. (1993). \textit{Multicomponent Mass Transfer}. New York: Wiley.
+Taylor, R., Krishna, R. \textit{Multicomponent Mass Transfer}. New York: Wiley, 1993.
 
 \bibitem{Taylor} 
 \label{eqn:my_ref_3}
